@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Control Central</title>
+
+    <link rel="stylesheet" href="Styles/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Scripts/home.js"></script>
+</head>
+
+<body>
+
+<div class="flex-container">
+    <div class="telemetry">
+        <img class="boat-diagram" src="Icons/Boat-complete.svg">
+        <img class="telemetry-dashboard" src="Icons/Battery-dashboard.svg">
+    </div>
+
+    <div class="alert-panel">
+        <div class="alert-panel-title">
+            <h1><b>ALERT PANEL</b></h1>
+        </div>
+        <div class="alert-panel-list">
+            <!Make the status icons change based on telemetry>
+
+            <img class="telemetry-icon" id="battery" src="Icons/Green-telemetry-icon.svg">
+            <p class="alert-panel-item">Battery</p>
+
+            <img class="telemetry-icon" id="esc-motor" src="Icons/Green-telemetry-icon.svg">
+            <p class="alert-panel-item">ESC/Motor</p>
+
+            <img class="telemetry-icon" id="servo" src="Icons/Red-telemetry-icon.svg">
+            <p class="alert-panel-item">Servo</p>
+
+            <img class="telemetry-icon" id="humidity" src="Icons/Yellow-telemetry-icon.svg">
+            <p class="alert-panel-item">Humidity</p>
+            
+            <img class="telemetry-icon" id="connection" src="Icons/Green-telemetry-icon.svg">
+            <p class="alert-panel-item">Connection</p>
+        </div>
+    </div>
+</div>
+
+<div class="controls">
+    <div class= "left-section">
+        <button class="control-button" id="left-button" onclick="leftRudder()">LEFT</button>
+    </div>
+    <div class="center-section">
+        <button class="control-button" id="center-button" onclick="resetRudder()">CENTER</button>
+        <input type="range" class="rudder-slider" id="rudder" min="-45" max="45" step="5">
+    </div>
+    <div class= "right-section">
+        <button class="control-button" id="right-button" onclick="rightRudder()">RIGHT</button>
+    </div>
+    <div class= "throttle-section">
+        <input type="range" class="throttle-slider" id="throttle" min="0" max="100" step="10" value="0">
+    </div>
+</div>
+
+</body>
+</html>
