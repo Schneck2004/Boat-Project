@@ -12,9 +12,19 @@
 <body>
 
 <div class="flex-container">
+
+    
+
     <div class="telemetry">
-        <img class="boat-diagram" src="Icons/Boat-complete.svg">
-        <img class="telemetry-dashboard" src="Icons/Battery-dashboard.svg">
+        <div class="title">
+            <h1>TELEMETRY</h1>
+        </div>
+
+        <div class="telemetry-graphics">
+            <img class="boat-diagram" src="Icons/Boat-complete.svg">
+
+            <img class="telemetry-dashboard" src="Icons/Battery-dashboard.svg">
+        </div>
     </div>
 
     <div class="alert-panel">
@@ -22,21 +32,31 @@
             <h1><b>ALERT PANEL</b></h1>
         </div>
         <div class="alert-panel-list">
-            <!Make the status icons change based on telemetry>
+            <!-- Make the status icons change based on telemetry -->
 
-            <img class="telemetry-icon" id="battery" src="Icons/Green-telemetry-icon.svg">
+            <svg width="30" height="30" class="telemetry-icon" id="battery">
+                <circle cx="15" cy="15" r="12" stroke="#D9D9D9" stroke-width="5" fill="#00C000" />
+            </svg>
             <p class="alert-panel-item">Battery</p>
 
-            <img class="telemetry-icon" id="esc-motor" src="Icons/Green-telemetry-icon.svg">
+            <svg width="30" height="30" class="telemetry-icon" id="battery">
+                <circle cx="15" cy="15" r="12" stroke="#D9D9D9" stroke-width="5" fill="#00C000" />
+            </svg>
             <p class="alert-panel-item">ESC/Motor</p>
 
-            <img class="telemetry-icon" id="servo" src="Icons/Red-telemetry-icon.svg">
+            <svg width="30" height="30" class="telemetry-icon" id="battery">
+                <circle cx="15" cy="15" r="12" stroke="#D9D9D9" stroke-width="5" fill="#C00000" />
+            </svg>
             <p class="alert-panel-item">Servo</p>
 
-            <img class="telemetry-icon" id="humidity" src="Icons/Yellow-telemetry-icon.svg">
+            <svg width="30" height="30" class="telemetry-icon" id="battery">
+                <circle cx="15" cy="15" r="12" stroke="#D9D9D9" stroke-width="5" fill="#CCC500" />
+            </svg>
             <p class="alert-panel-item">Humidity</p>
             
-            <img class="telemetry-icon" id="connection" src="Icons/Green-telemetry-icon.svg">
+            <svg width="30" height="30" class="telemetry-icon" id="battery">
+                <circle cx="15" cy="15" r="12" stroke="#D9D9D9" stroke-width="5" fill="#00C000" />
+            </svg>
             <p class="alert-panel-item">Connection</p>
         </div>
     </div>
@@ -44,16 +64,18 @@
 
 <div class="controls">
     <div class= "left-section">
-        <button class="control-button" id="left-button" onclick="leftRudder()">LEFT</button>
+        <button class="control-button" id="left-button" onclick="leftRudder()"><b>LEFT</b></button>
     </div>
     <div class="center-section">
-        <button class="control-button" id="center-button" onclick="resetRudder()">CENTER</button>
+        <h1 class="control-panel-title">CONTROLS</h1>
+        <button class="control-button" id="center-button" onclick="resetRudder()"><b>CENTER</b></button>
         <input type="range" class="rudder-slider" id="rudder" min="-45" max="45" step="5">
     </div>
     <div class= "right-section">
-        <button class="control-button" id="right-button" onclick="rightRudder()">RIGHT</button>
+        <button class="control-button" id="right-button" onclick="rightRudder()"><b>RIGHT</b></button>
     </div>
     <div class= "throttle-section">
+        <h1>THROTTLE</h1>
         <input type="range" class="throttle-slider" id="throttle" min="0" max="100" step="10" value="0">
     </div>
 </div>

@@ -1,8 +1,23 @@
+/* 
+Color pallete:
+green: #00C000
+yellow: #CCC500
+red: #C00000
+dark blue: #1C1880
+gray: #5C5C5C
+light gray: #999
+very light gray: #CCC
+almost black: #1E1E1E
+*/
+
 * {
     box-sizing: border-box;
 
     margin: 0;
     padding: 0;
+
+    
+    font-family: Helvetica;
 }
 
 body {
@@ -22,19 +37,31 @@ body {
 .telemetry {
     flex: 75%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    
+    color: white;
+}
+
+.telemetry-graphics {
+    display: flex;
 
     justify-content: space-evenly;
-
     align-content: center;
 }
 
-.telemetry > .boat-diagram {
+.boat-diagram {
     height: 360px;
 
     align-self: center;
 }
 
-.telemetry > .telemetry-dashboard {
+.telemetry-dashboard {
     height: 360px;
 
     align-self: center;
@@ -44,25 +71,29 @@ body {
     flex: 25%;
     display: flex;
     flex-flow: column;
+    justify-content: space-evenly;
 
     background-color: #1E1E1E;
-    font-family: Helvetica;
     color: white;
 }
 
-.alert-panel > .alert-panel-title {
-    flex: 15%;
+.alert-panel-title {
+    flex: 10%;
     display: flex;
     align-content: center;
     justify-content: center;
+
+    margin: 10px;
 
     font-size: 32;
 }
 
 .alert-panel > .alert-panel-list {
-    flex: 85%;
+    flex: 90%;
     display: grid;
     grid-template-columns: 45px max-content;
+
+    margin-bottom: 10px;
 
     align-items: center;
     justify-content: center;
@@ -84,6 +115,10 @@ body {
     background-color: #5C5C5C;
 }
 
+.control-panel-title {
+    color: white;
+}
+
 .control-button {
     background-color: white;
     height: 80px;
@@ -93,6 +128,8 @@ body {
     border-radius: 22.5px;
 
     transition: 0.3s;
+
+    font-size: 24px;
 }
 
 .control-button:hover {
@@ -168,8 +205,11 @@ body {
 .throttle-section {
     flex: 25%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    color: white;
 }
 
 .throttle-slider {
